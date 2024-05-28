@@ -1,0 +1,33 @@
+import random
+
+flag = 0
+while(flag == 0):
+    you = str(input("Enter your choice among sto, pap, sci\n"))
+    action = ["sto", "pap", "sci"]
+    comp = random.choice(action)
+    
+    if(you == comp):
+        print(f"Both players selected {you}. It's a tie!")
+    elif(you == "sto" and comp == "pap"):
+        print("Computer wins")
+    elif(you == "sto" and comp == "sci"):
+        print("You win")
+    elif(you == "pap" and comp == "sto"):
+        print("You win")
+    elif(you == "pap" and comp == "sci"):
+        print("Computer wins")
+    elif(you == "sci" and comp == "pap"):
+        print("You win")
+    elif(you == "sci" and comp == "sto"):  
+        print("Computer wins")
+        
+    print(f"\nYou chose {you}, computer chose {comp}.\n")
+    print("If you want to play more, enter 1\n")
+        
+    a = int(input("Enter your choice: "))
+              
+    if a == 1:
+        flag = 0
+    else:
+        flag = 1
+        print("Thank you ...\nRate our game")
